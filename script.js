@@ -1,19 +1,28 @@
-const container = document.querySelector(".container");
+const userInteract = document.querySelector('.prompt');
+const userInput = document.querySelector('input');
+const container = document.querySelector('.container');
 
-const userInput = 4;
+const button = document.createElement('button');
+button.textContent = "Draw New Grid";
+userInteract.appendChild(button);
 
-function drawGrid(gridSize) {
-    container.textContent = "";
+button.addEventListener('click', () => {
+        const userNum = userInput.value;
+        userInput.value = "";
+        container.textContent = "";
 
-    const squareSize = 500 / gridSize;
+        drawGrid(userNum);
+    });
 
-    for (let i = 0; i < (gridSize * gridSize); i++) {
-        const square = document.createElement('div');
-        square.classList.add('grid-item');
-        square.style.width = `${squareSize}px`;
-        square.style.height = `${squareSize}px`;
-        container.appendChild(square);
+    function drawGrid(gridSize) {
+
+        const squareSize = 500 / gridSize;
+
+        for (let i = 0; i < (gridSize * gridSize); i++) {
+            const square = document.createElement('div');
+            square.classList.add('grid-item');
+            square.style.width = `${squareSize}px`;
+            square.style.height = `${squareSize}px`;
+            container.appendChild(square);
+        }
     }
-}
-
-drawGrid(userInput);
