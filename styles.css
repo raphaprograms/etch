@@ -1,3 +1,18 @@
-p {
-    font-weight: bold;
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap ;
+    width: 500px;
+    height: 500px;
+    border: 1px solid red;
+    margin: 0 auto;
+}
+.container > div {
+    box-sizing: border-box;
+    border: 1px solid black;
+    width: 250px;
+    height: 250px;
 }
