@@ -4,7 +4,7 @@
 }
 .container {
     display: flex;
-    flex-wrap: wrap ;
+    flex-wrap: wrap; 
     width: 500px;
     height: 500px;
     border: 1px solid red;
@@ -15,4 +15,8 @@
     border: 1px solid black;
     width: 250px;
     height: 250px;
+}
+
+.write {
+    background-color: black;
 }
